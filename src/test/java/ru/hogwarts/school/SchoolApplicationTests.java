@@ -2,6 +2,7 @@ package ru.hogwarts.school;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -31,7 +32,6 @@ class SchoolApplicationTests {
                 .assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/student", String.class))
                 .isNotEmpty();
     }
-
 
     @Test
     public void testGetStudentById() throws Exception {
