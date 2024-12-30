@@ -20,7 +20,6 @@ import ru.hogwarts.school.service.FacultyService;
 
 import java.util.Optional;
 
-
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.jsonPath;
