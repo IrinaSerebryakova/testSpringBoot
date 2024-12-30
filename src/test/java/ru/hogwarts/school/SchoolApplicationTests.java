@@ -32,7 +32,6 @@ class SchoolApplicationTests {
                 .isNotEmpty();
     }
 
-
     @Test
     public void testGetStudentById() throws Exception {
         Assertions
