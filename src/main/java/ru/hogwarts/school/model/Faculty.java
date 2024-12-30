@@ -10,6 +10,7 @@ import java.util.Set;
 @Entity
 @Table(name = "faculties")
 public class Faculty {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -19,6 +20,7 @@ public class Faculty {
     @OneToMany(mappedBy = "faculty")   //фак-т в отнош.1 к мн-м со студ.,какое поле внутри ст.отвеч.за связь с фак-том
    @JsonManagedReference
     private Set<Student> students;
+
     public Faculty(Long id, String name, String color) {
         this.id = id;
         this.name = name;
@@ -47,6 +49,7 @@ public class Faculty {
     public String getColor() {
         return color;
     }
+
     public void setColor(String color) {
         this.color = color;
     }
@@ -57,7 +60,6 @@ public class Faculty {
         if (!(o instanceof Faculty faculty)) return false;
         return Objects.equals(id, faculty.id) && Objects.equals(name, faculty.name) && Objects.equals(color, faculty.color);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(id, name, color);

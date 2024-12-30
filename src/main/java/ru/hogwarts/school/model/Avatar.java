@@ -23,6 +23,7 @@ public class Avatar {
     private String mediaType;
     @Lob
     private byte[] data;
+
     @OneToOne
     private Student student;
 

@@ -20,7 +20,6 @@ public class StudentController {
         this.studentService = studentService;
     }
 
-
     @PostMapping
     public Student createStudent(@RequestBody Student student) {
         return studentService.createStudent(student);

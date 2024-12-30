@@ -36,7 +36,6 @@ public class AvatarController {
         return ResponseEntity.ok().build();
     }
 
-
     @GetMapping(value = "/{id}/avatar-from-db")
     public ResponseEntity<byte[]> downloadAvatar(@PathVariable Long id) {
         Avatar avatar = avatarService.findAvatar(id);
